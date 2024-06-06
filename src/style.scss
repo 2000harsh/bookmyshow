@@ -1,0 +1,40 @@
+.bg-body-tertiary{
+    background-color: rgba(248, 68, 100) !important;
+}
+
+.navtext, .navdropdown{
+    color: aliceblue !important;
+}
+
+.navdropdown:hover{
+    color: black !important;
+}
+
+#basic-nav-dropdown {
+    color: aliceblue !important;
+}
+
+.dropdown-menu.show{    
+    background-color:rgba(248, 68, 100);
+}
+
+.appstyle{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.cardbtn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticketbtn{
+    border-radius: 80%;
+    width:40px;
+    background-color: rgba(248, 68, 100);
+}
+
+.counter{
+    margin-left: 20px;
+    margin-right: 20px;
+}
