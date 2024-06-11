@@ -1,5 +1,4 @@
 import React from 'react';
-import movieimg from "./movieimg.jpeg";
 import s1 from "./s1.jpeg";
 import s2 from "./s2.jpeg";
 import s3 from "./s3.jpeg";
