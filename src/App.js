@@ -15,13 +15,13 @@ function App() {
   return (
     <div>
       <Header />
-      <div className="appstyle container">
+      <div className="appstyle ">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ticket-detail/:moviename" element={<TicketDetail />} />
           <Route
             path="/booking-tickets/:moviename"
-            element={<BookTicket Booking={Booking} DisplayData={bookingData} />}
+            element={<BookTicket Booking={Booking} bookingData={bookingData} />}
           />
         </Routes>
       </div>

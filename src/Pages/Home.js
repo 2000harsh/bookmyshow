@@ -3,6 +3,7 @@ import movieData from "../common/StaticData";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import movieimg from "../common/movieimg.jpeg";
 import { useNavigate } from "react-router-dom";
+import Carousel from "../common/HomeCarousel";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -16,6 +17,9 @@ const Home = () => {
   };
 
   return (
+    <>
+      <Carousel />
+      <div className="container">
     <Row>
       {movieData.map((i, index) => (
         <Col md={4}>
@@ -58,6 +62,8 @@ const Home = () => {
         </Col>
       ))}
     </Row>
+    </div>
+    </>
   );
 };
 

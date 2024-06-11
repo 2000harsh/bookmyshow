@@ -32,9 +32,34 @@
     border-radius: 80%;
     width:40px;
     background-color: rgba(248, 68, 100);
+    color: aliceblue;
 }
 
 .counter{
     margin-left: 20px;
     margin-right: 20px;
 }
+
+.ant-table-row{
+    background-color: darkgray;
+}
+
+:where(.css-dev-only-do-not-override-3rel02).ant-table-wrapper .ant-table-thead >tr>th{
+    color: aliceblue;
+}
+
+:where(.css-dev-only-do-not-override-3rel02).ant-table-wrapper .ant-table-thead >tr>th{
+    background-color:rgba(248, 68, 100) !important;
+}
+
+.bookingtbtn{
+    background-color:rgba(248, 68, 100) !important;
+    color: aliceblue;
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 1600px;
+    height: 350px;
+    object-fit: cover; /* Ensures the image covers the given area without stretching */
+  }
