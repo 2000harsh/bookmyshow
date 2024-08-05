@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div className="appstyle container">
+      <div className="appstyle ">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ticket-detail/:moviename" element={<TicketDetail />} />
