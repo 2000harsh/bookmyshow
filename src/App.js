@@ -21,7 +21,7 @@ function App() {
           <Route path="/ticket-detail/:moviename" element={<TicketDetail />} />
           <Route
             path="/booking-tickets/:moviename"
-            element={<BookTicket Booking={Booking} DisplayData={bookingData} />}
+            element={<BookTicket Booking={Booking} bookingData={bookingData} />}
           />
         </Routes>
       </div>

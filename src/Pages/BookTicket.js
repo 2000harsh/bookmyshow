@@ -1,6 +1,6 @@
-import { Form, Input, Select } from "antd";
+import { Form, Input, Select, Button } from "antd";
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import movieData from "../common/StaticData";
 
@@ -29,31 +29,41 @@ const BookTicket = ({ Booking, bookingData }) => {
   const TotalPrice = increment * DynamicData.price;
   return (
     <div>
-      <Form
-        form={form}
-        onFinish={onFinish}
-        initialValues={{ cname: "", mname: "", counter: "", fprice: "" }}
-      >
-        <Form.Item name="cname" label="Name">
-          <Input />
-        </Form.Item>
-        <Form.Item name="mname" label="Movie Name">
-          <Select defaultValue={moviename} />
-        </Form.Item>
-        <Form.Item name="counter" label="Number of Tickets">
-          <Button className="ticketbtn" onClick={Decrese}>
-            -
-          </Button>
-          <span className="counter">{increment}</span>
-          <Button className="ticketbtn" onClick={Increse}>
-            +
-          </Button>{" "}
-        </Form.Item>
-        <Form.Item name="fprice" label="Final Price">
-          <span>$ {TotalPrice}</span>
-        </Form.Item>
-        <Button htmlType="submit">Book</Button>
-      </Form>
+      <>
+        <Form
+          form={form}
+          onFinish={onFinish}
+          initialValues={{ cname: "", counter: "", fprice: "" }}
+        >
+          <Form.Item name="cname" label="Name">
+            <Input />
+          </Form.Item>
+          <Form.Item name="mname" label="Movie Name">
+            <Select defaultValue={moviename} />
+          </Form.Item>
+          <Form.Item name="counter" label="Number of Tickets">
+            <Button className="ticketbtn" onClick={Decrese}>
+              -
+            </Button>
+            <span className="counter">{increment}</span>
+            <Button className="ticketbtn" onClick={Increse}>
+              +
+            </Button>{" "}
+          </Form.Item>
+          <Form.Item name="fprice" label="Final Price">
+            {/* <span>$ {TotalPrice}</span> */}
+            <Input defaultValue={TotalPrice} />
+          </Form.Item>
+          <Button htmlType="submit">Book</Button>
+        </Form>
+
+        {bookingData.map((i) => (
+          <>
+            <p>{i.cname}</p>
+            <p>{TotalPrice}</p>
+          </>
+        ))}
+      </>
     </div>
   );
 };
